@@ -10,7 +10,7 @@
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">Browse Our Properties</h1>
+          <h1 class="display-4">Pretražite naše nekretnine</h1>
           <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
         </div>
       </div>
@@ -24,9 +24,9 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="{% url 'index' %}">
-              <i class="fas fa-home"></i> Home</a>
+              <i class="fas fa-home"></i> Početna</a>
           </li>
-          <li class="breadcrumb-item active"> Browse Listings</li>
+          <li class="breadcrumb-item active"> Pregled objava</li>
         </ol>
       </nav>
     </div>
@@ -43,7 +43,7 @@
                 <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
                 <div class="card-img-overlay">
                   <h2>
-                    <span class="badge badge-secondary text-white">{{ listing.price | intcomma |localize }} EUR</span>
+                    <span class="badge badge-secondary text-white">{{ listing.price | intcomma }} EUR</span>
                   </h2>
                 </div>
                 <div class="card-body">
@@ -75,14 +75,14 @@
                       <i class="fas fa-clock"></i> Objavljeno prije: {{ listing.list_date | timesince }}</div>
                   </div>
                   <hr>
-                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                  <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">Više informacija</a>
                 </div>
               </div>
             </div>
           {% endfor %}
         {% else %}
           <div class="col-md-12">
-            <p>No Listings Available</p>
+            <p>Nema dostupnih objava</p>
           </div>
         {% endif %}
    
